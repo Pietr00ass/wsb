@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Weryfikacja 2FA{% endblock %}
+{% block content %}
+<h2>Wprowadź kod 2FA</h2>
+<form method="post">
+  <div class="mb-3"><input type="text" class="form-control" name="code" placeholder="Kod" required></div>
+  <button class="btn btn-primary">Weryfikuj</button>
+</form>
+{% endblock %}

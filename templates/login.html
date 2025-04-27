@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Logowanie{% endblock %}
+{% block content %}
+<h2>Logowanie</h2>
+<form method="post">
+  <div class="mb-3"><input type="text" class="form-control" name="username" placeholder="Nazwa użytkownika" required></div>
+  <div class="mb-3"><input type="password" class="form-control" name="password" placeholder="Hasło" required></div>
+  <div class="mb-3">
+    <label>2FA:</label>
+    <select name="2fa_method" class="form-select">
+      <option value="totp">Aplikacja (TOTP)</option>
+      <option value="email">Email</option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Zaloguj</button>
+</form>
+{% endblock %}

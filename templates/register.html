@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Rejestracja{% endblock %}
+{% block content %}
+<h2>Rejestracja</h2>
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3"><input type="text" class="form-control" name="username" placeholder="Nazwa użytkownika" required></div>
+  <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Email" required></div>
+  <div class="mb-3"><input type="password" class="form-control" name="password" placeholder="Hasło" required></div>
+  <div class="mb-3">
+    <label>2FA:</label>
+    <select name="2fa_method" class="form-select">
+      <option value="totp">Aplikacja (TOTP)</option>
+      <option value="email">Email</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Biometria (opcjonalnie):</label>
+    <input type="file" class="form-control" name="face_image" accept="image/*">
+  </div>
+  <button class="btn btn-primary">Zarejestruj</button>
+</form>
+{% endblock %}

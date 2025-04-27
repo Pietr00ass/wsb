@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Weryfikacja twarzy{% endblock %}
+{% block content %}
+<h2>Biometria twarzy</h2>
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3"><input type="file" class="form-control" name="face_image" accept="image/*" required></div>
+  <button class="btn btn-primary">Sprawdź</button>
+</form>
+{% endblock %}
